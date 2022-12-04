@@ -20,16 +20,16 @@ describe('AppComponent', () => {
     expect(app).toBeTruthy();
   });
 
-  it(`should have as title 'konbu'`, () => {
+  it(`should have as title 'konbu-main'`, () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;
-    expect(app.title).toEqual('konbu');
+    expect(app.title).toEqual('konbu-main');
   });
 
   it('should render title', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.nativeElement as HTMLElement;
-    expect(compiled.querySelector('.content span')?.textContent).toContain('konbu app is running!');
+    expect(compiled.querySelector('.content span')?.textContent).toContain('konbu-main app is running!');
   });
 });
