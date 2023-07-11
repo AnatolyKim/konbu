@@ -8,7 +8,7 @@
     }
   },
   "sourceRoot": "src",
-  "prefix": "app",
+  "prefix": "kb",
   "targets": {
     "build": {
       "executor": "@angular-devkit/build-angular:browser",
@@ -95,6 +95,12 @@
           "src/styles.scss"
         ],
         "scripts": []
+      }
+    },
+    "lint": {
+      "builder": "@angular-eslint/builder:lint",
+      "options": {
+        "lintFilePatterns": ["src/**/*.ts"]
       }
     }
   }

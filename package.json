@@ -2,11 +2,12 @@
   "name": "konbu-main",
   "version": "0.0.0",
   "scripts": {
-    "ng": "ng",
     "start": "nx serve",
     "build": "nx build",
     "watch": "nx build --watch --configuration development",
-    "test": "nx test"
+    "test": "nx test",
+    "lint": "nx lint",
+    "style-lint": "stylelint -f verbose --cache \"**/*.scss\""
   },
   "private": true,
   "dependencies": {
@@ -27,9 +28,12 @@
     "@angular-devkit/build-angular": "^16.1.4",
     "@angular-devkit/core": "~16.1.4",
     "@angular-devkit/schematics": "~16.1.4",
+    "@angular-eslint/eslint-plugin": "^16.0.3",
+    "@angular-eslint/eslint-plugin-template": "^16.0.3",
     "@angular/cli": "~16.1.4",
     "@angular/compiler-cli": "^16.1.4",
     "@nx/angular": "16.5.0",
+    "@nx/eslint-plugin": "^16.5.1",
     "@nx/workspace": "16.5.0",
     "@schematics/angular": "~16.1.4",
     "@types/jasmine": "~4.3.0",
@@ -47,6 +51,12 @@
     "karma-jasmine-html-reporter": "~2.0.0",
     "nx": "16.5.0",
     "nx-cloud": "latest",
+    "stylelint": "^15.10.1",
+    "stylelint-config-sass-guidelines": "^10.0.0",
+    "stylelint-scss": "^5.0.1",
     "typescript": "^4.8.4"
+  },
+  "nx": {
+    "targets": {}
   }
 }

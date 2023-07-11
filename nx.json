@@ -7,7 +7,7 @@
           "build",
           "test"
         ],
-        "accessToken": "Y2RmNTBlODQtZTNkYy00ZDFlLThjNWEtMWQzNjlhNmFhNDFkfHJlYWQtd3JpdGU="
+        "accessToken": "OGJmMzhkZjYtOGViNS00MTNlLWE1MzMtOWQyYjYzYTc5MTc4fHJlYWQtd3JpdGU="
       }
     }
   },
@@ -41,6 +41,14 @@
         "default",
         "^production"
       ]
+    },
+    "lint": {
+      "executor": "@nx/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["src/app/**/*.ts"],
+        "quiet": true
+      }
     }
   }
 }

@@ -1,0 +1,27 @@
+{
+  "extends": "stylelint-config-sass-guidelines",
+  "ignoreFiles": ["dist/**/*"],
+  "rules": {
+    "no-empty-source": null,
+    "max-nesting-depth": [
+      3,
+      {
+        "ignoreAtRules": ["each", "media", "supports", "include", "ng-deep", "host-context"]
+      }
+    ],
+    "selector-pseudo-element-no-unknown": [
+      true,
+      {
+        "ignorePseudoElements": ["ng-deep", "host-context"]
+      }
+    ],
+    "function-url-quotes": "never",
+    "selector-max-compound-selectors": 4,
+    "selector-no-qualifying-type": [
+      true,
+      {
+        "ignore": ["class", "attribute"]
+      }
+    ]
+  }
+}
