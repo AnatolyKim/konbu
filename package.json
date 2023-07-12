@@ -7,7 +7,9 @@
     "watch": "nx build --watch --configuration development",
     "test": "nx test",
     "lint": "nx lint",
-    "style-lint": "stylelint -f verbose --cache \"**/*.scss\""
+    "style-lint": "stylelint -f verbose --cache \"**/*.scss\"",
+    "check-format": "prettier \"src/**/*{.html,.ts,.js,.json,.scss}\" --cache --config ./.prettierrc.json -c",
+    "format": "prettier \"src/**/*{.html,.ts,.js,.json,.scss}\" --write --cache"
   },
   "private": true,
   "dependencies": {
@@ -39,6 +41,7 @@
     "@types/jasmine": "~4.3.0",
     "@typescript-eslint/eslint-plugin": "^5.45.0",
     "eslint": "^8.29.0",
+    "eslint-config-prettier": "^8.8.0",
     "eslint-config-standard-with-typescript": "^23.0.0",
     "eslint-plugin-import": "^2.26.0",
     "eslint-plugin-n": "^15.5.1",
@@ -51,6 +54,7 @@
     "karma-jasmine-html-reporter": "~2.0.0",
     "nx": "16.5.0",
     "nx-cloud": "latest",
+    "prettier": "^3.0.0",
     "stylelint": "^15.10.1",
     "stylelint-config-sass-guidelines": "^10.0.0",
     "stylelint-scss": "^5.0.1",
