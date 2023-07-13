@@ -6,10 +6,12 @@
     "build": "nx build",
     "watch": "nx build --watch --configuration development",
     "test": "nx test",
+    "test-headless": "nx run test --watch false --browsers ChromeHeadless",
     "lint": "nx lint",
     "style-lint": "stylelint -f verbose --cache \"**/*.scss\"",
     "check-format": "prettier \"src/**/*{.html,.ts,.js,.json,.scss}\" --cache --config ./.prettierrc.json -c",
-    "format": "prettier \"src/**/*{.html,.ts,.js,.json,.scss}\" --write --cache"
+    "format": "prettier \"src/**/*{.html,.ts,.js,.json,.scss}\" --write --cache",
+    "prepare": "husky install"
   },
   "private": true,
   "dependencies": {
@@ -34,6 +36,8 @@
     "@angular-eslint/eslint-plugin-template": "^16.0.3",
     "@angular/cli": "~16.1.4",
     "@angular/compiler-cli": "^16.1.4",
+    "@commitlint/cli": "^17.6.6",
+    "@commitlint/config-conventional": "^17.6.6",
     "@nx/angular": "16.5.0",
     "@nx/eslint-plugin": "^16.5.1",
     "@nx/workspace": "16.5.0",
@@ -58,7 +62,8 @@
     "stylelint": "^15.10.1",
     "stylelint-config-sass-guidelines": "^10.0.0",
     "stylelint-scss": "^5.0.1",
-    "typescript": "^4.8.4"
+    "typescript": "^4.8.4",
+    "husky": "^8.0.0"
   },
   "nx": {
     "targets": {}
