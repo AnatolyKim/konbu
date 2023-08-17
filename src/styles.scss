@@ -39,6 +39,11 @@ $konbu-main-theme: mat.define-light-theme(
 @import '~normalize.css';
 @import './app/shared/styles/index';
 
+html,
+body {
+  height: 100%;
+}
+
 body {
   font-family: 'Jost', sans-serif;
 }
